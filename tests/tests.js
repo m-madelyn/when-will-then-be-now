@@ -9,7 +9,7 @@ describe('filterLogs', () => {
       { environment: 'qa', timestamp: 1553796277000, message: 'Error: could not find property `price` of undefined' },
       { environment: 'qa', timestamp: 1553810677000, message: 'Error: array index out of range' },
     ]
-    const returnedLogs = filterLogs(allLogs, 'qa', '2019-03-28')
+    const returnedLogs = filterLogs(allLogs, 'qa', 1553796277000)
 
     expect(returnedLogs).to.deep.equal(expectedLogs)
   })
